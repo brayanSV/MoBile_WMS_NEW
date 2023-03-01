@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.task.TaskFragment">
+
+    <data>
+        <import type="com.user.ingeweb.alcalist_mobile_wms_new.utils.ButtonCallback" />
+
+        <variable
+            name="buttonOnclick"
+            type="ButtonCallback" />
+
+        <variable
+            name="buttonOnclick2"
+            type="ButtonCallback" />
+
+        <variable
+            name="viewModel"
+            type="com.user.ingeweb.alcalist_mobile_wms_new.ui.task.TaskViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello" />
+
+        <Button
+            android:id="@+id/btnUno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Llamar tareas"
+            android:onClick="@{() -> buttonOnclick.Click()}" />
+
+        <Button
+            android:id="@+id/btnDos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Llamar login"
+            android:onClick="@{() -> buttonOnclick2.Click()}" />
+    </LinearLayout>
+</layout>
